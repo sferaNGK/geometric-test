@@ -26,8 +26,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 255, 251, 0.05);
+    backdrop-filter: blur(0.6vh);
+    background: rgba(177, 255, 137, 0.1);
     z-index: 1;
     visibility: hidden;
 }
@@ -86,7 +86,7 @@ img:last-child {
     padding: 2vh 2vw;
     border-radius: 1.5vw 0 0 1.5vw;
     background: white;
-    box-shadow: 0 0 12px 0 rgba(109, 109, 109, 0.85);
+    box-shadow: 0 0 1vh 0 rgba(109, 109, 109, 0.85);
     width: 75%;
     max-height: 90%;
     overflow-y: scroll;
@@ -127,7 +127,11 @@ img:last-child {
     margin-top: 1vh;
 }
 
-.information .professions {
+.information .btn-row {
+    display: flex;
+}
+
+.information button {
     font-family: "CyrRound", serif;
     font-size: 3vh;
     border-radius: 0.75vw;
@@ -138,4 +142,12 @@ img:last-child {
     width: max-content;
     margin: 2.8vh 0 1.5vh 0;
     cursor: pointer;
+}
+
+.information button:disabled {
+    background: #00730c;
+}
+
+.information .professions {
+    margin-left: 1vw;
 }
