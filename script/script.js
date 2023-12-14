@@ -1,4 +1,5 @@
 const shapes = document.querySelector('.shapes')
+const blurFilter = document.querySelector('.blurFilter')
 const information = [{
         title: "Квадрат — Труженик",
         text: "У вас доминирует левое полушарие мозга - вы обладатель аналитического склада ума. Вам легче даются математические расчеты и логические цепочки, чем интуитивное восприятие ситуаций и вещей.\n            Ваши главные качества: выносливость, усидчивость, методичность, логика, упорство.\n            Вы очень любите порядок во всем. Работу предпочитаете с конкретно поставленными задачами и целями. Неопределенность – это не про вас. Она выводит из равновесия. Вы не любите сюрпризов и спонтанных действий. Все должно быть так, как вы запланировали и никак иначе.\n            Вы способны упорядочить вокруг себя все: людей, вещи, даже события. Это и выделяет вас среди остальных. Вы - упорные, часто становитесь трудоголиками, обладаете практическим складом ума."
@@ -24,6 +25,7 @@ const information = [{
 
 for (let shape of shapes.children) {
     shape.addEventListener("click", () => {
+        blurFilter.style.visibility = "visible"
         document.body.insertAdjacentHTML("afterbegin", `
         <div class="information">
             <div class="title">
@@ -35,6 +37,7 @@ for (let shape of shapes.children) {
         </div>`)
         document.querySelector('i').addEventListener("click", () => {
             document.body.removeChild(document.querySelector('.information'))
+            blurFilter.style.visibility = "hidden"
         })
     })
 }
