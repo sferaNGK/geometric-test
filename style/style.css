@@ -32,6 +32,21 @@ body {
     visibility: hidden;
 }
 
+.backButton {
+    font-family: "CyrRound", serif;
+    font-size: 3.5vh;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    line-height: 5.5vh;
+    padding: 0.25vh 0.8vw;
+    background: #45b100;
+    border-radius: 0.75vw;
+    border: 0.1vw solid white;
+}
+
 h1 {
     font-family: "CyrRound", serif;
     font-size: 6vh;
